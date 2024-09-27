@@ -1,0 +1,109 @@
+theme: osuny
+paginate: 18
+enableRobotsTXT: true
+removePathAccents: true
+params:
+  search:
+    active: true
+  breadcrumb:
+    position: after-hero
+  logo:
+    header: "/assets/images/logo.svg"
+    footer: "/assets/images/logo-blanc.svg"
+  pages:
+    index:
+      truncate_description: 0
+  summary:
+    position: hero
+  locations:
+    default_image: false
+    index:
+      truncate_description: 200
+      layout: grid # grid | list
+      options:
+        summary: true
+        image: true
+  image_sizes:
+    design_system:
+      lightbox:
+        disabled: true
+      hero:
+        desktop:  2000
+    blocks:
+      call_to_action:
+        tablet:   700
+        desktop:  900
+      persons:
+        desktop:  170
+      gallery:
+        carousel:
+          desktop:  700
+    sections:
+      categories:
+        hero:
+          desktop:  2000
+        hero_term:
+          desktop:  2000
+      diplomas:
+        hero:
+          desktop:  2000
+        hero_single:
+          desktop:  2000
+      home:
+        hero:
+          desktop:  2000
+      events:
+        hero:
+          desktop:  2000
+        hero_single:
+          desktop:  2000
+        item:
+          mobile:   110
+          tablet:   250
+          desktop:  300
+      organizations:
+        hero:
+          desktop:  2000
+      pages:
+        hero:
+          desktop:  2000
+        item:
+          desktop:  2000
+      papers:
+        hero:
+          desktop:  2000
+      posts:
+        hero:
+          desktop:  2000
+        hero_single:
+          desktop:  2000
+        item:
+          desktop:  2000
+      projects:
+        hero:
+          desktop:  2000
+        hero_single:
+          desktop:  2000
+        item:
+          desktop:  2000
+      programs:
+        hero:
+          desktop:  2000
+        item:
+          mobile:   150
+          tablet:   200
+          desktop:  410
+      publications:
+        hero:
+          desktop:  2000
+      volumes:
+        hero:
+          desktop:  2000
+      locations:
+        hero:
+          desktop:  2000
+        hero_single:
+          desktop:  2000
+        item:
+          tablet:   800
+          desktop:  600

@@ -1,0 +1,230 @@
+////// SECTION ACCUEIL
+.page__home
+    .hero--with-image
+        > .container
+            .content
+                .hero-text
+                    @include media-breakpoint-up(desktop)
+                        width: columns(7)
+    .blocks
+        .block
+            &-key_figures
+                h2.block-title
+                    @include h2
+                    font-style: normal
+                    text-align: center
+            &-call_to_action
+                &.block-titled
+                    h2.block-title
+                        font-size: $body-size
+                        font-family: $body-font-family
+                        font-style: normal
+                        @include media-breakpoint-up(desktop)
+                            font-size: $body-size-desktop
+
+////// SECTION LOCATION (CAMPUS)
+.locations__term
+    ul.diplomas
+        > li
+            > a
+                font-style: italic
+                &::after
+                    content: ""
+                @include media-breakpoint-up(desktop)
+                    @include h3
+            .content
+                ol.programs
+                    > li
+                        justify-content: flex-start
+                        margin-top: $spacing-3
+                        @include media-breakpoint-up(md)
+                            &:not(:first-child)
+                                border-top: none
+                            .media
+                                order: 1
+                                width: columns(3)
+                        .program-content
+                            @include media-breakpoint-up(md)
+                                order: 2
+                                width: columns(9)
+                            a
+                                display: block
+                                width: 100%
+                                &::after
+                                    content: ""
+                            .program-details
+                                display: flex
+                                flex-direction: column
+                                justify-content: space-between
+                                .description
+                                    font-size: pxToRem(15)
+                                    @include media-breakpoint-up(desktop)
+                                        font-size: $body-size-desktop
+                                .details-more
+                                    display: flex
+                                    flex-direction: row
+                                    gap: $spacing-1
+                                    @include media-breakpoint-down(desktop)
+                                        margin-top: $spacing-2
+                                    picture
+                                        max-height: 60px
+                                        max-width: columns(3)
+                                        img
+                                            object-fit: contain
+                                            object-position: left
+                                            height: 100%
+
+                                a, p.meta, .btn
+                                    @include meta
+                                    font-size: pxToRem(15)
+                                .btn, ol, .meta, picture
+                                    margin-top: $spacing-1
+                                    @include media-breakpoint-up(desktop)
+                                        margin-top: $spacing-3
+                                .btn
+                                    display: block
+                                    font-size: var(--small-size)
+                                    width: columns(3)
+                                    min-width: fit-content
+                                    max-width: columns(3)
+                                    height: fit-content
+                                    background-color: $color-text
+                                    color: $color-background
+                                    &:hover
+                                        background-color: $color-background
+                                        color: $color-text
+                                ol
+                                    > li
+                                        margin: 0
+                                        a
+                                            &::before
+                                                content: "·"
+                                                vertical-align: initial
+                                            @include media-breakpoint-up(desktop)
+                                                font-size: $body-size-desktop
+                                .meta
+                                    .title
+                                        display: block
+                                        font-weight: 600
+                                @include media-breakpoint-up(desktop)
+                                    flex-direction: row
+                                    .btn
+                                        font-size: var(--body-size)
+                                    > div
+                                        width: columns(6)
+                                    .meta
+                                        max-width: columns(3)
+                                        text-align: right
+    .campus-map
+        .campus
+            &-content
+                font-family: $heading-font-family
+                font-size: $body-size-desktop
+
+////// SECTION PROGRAMS 
+body.programs__section, 
+body.diplomas__term
+    .hero
+        .container
+            .content
+                .hero-text
+                    @include media-breakpoint-up(desktop)
+                        width: columns(7)
+                .hero-logos
+                    flex-direction: row
+                    z-index: 2
+        .btn.website
+            text-align: left
+        .essential-container
+            .hero-essential,
+            .essential
+                @include media-breakpoint-up(desktop)
+                    grid-gap: 0
+                    width: columns(7)
+                    dt:not(:last-of-type) 
+                        border-bottom: 1px solid $marron-secondaire-3             
+                    dd
+                        text-align: right
+                        font-size: pxToRem(19)
+                        font-weight: 400    
+                        
+                    dd:not(:last-of-type)  
+                        border-bottom: 1px solid $marron-secondaire-3
+                    dt
+                        font-family: $heading-font-family
+                        font-size: pxToRem(22)
+                        font-weight: 400
+            .hero-actions
+                .dropdown-share
+                    .dropdown-menu 
+                        a:hover 
+                            color: white
+
+    .document-content
+        counter-reset: section
+        .content
+            > h2
+                @include h3
+                font-style: italic
+                @include media-breakpoint-down(desktop)
+                    &::before
+                        @include h1
+                        font-style: normal
+                        counter-increment: section
+                        content: counter(section) "."
+                @include media-breakpoint-up(desktop)
+                    &::after
+                        margin-top: $spacing-1
+                        display: block
+                        @include h1
+                        font-style: normal
+                        counter-increment: section
+                        content: counter(section) "."
+            .featured-image
+                display: none
+            
+            section:not(:first-child):not(.block)
+                @include media-breakpoint-up(desktop)
+                    margin-top: 0
+            section:not(:first-of-type):not(.block)
+                @include media-breakpoint-up(desktop)
+                    margin-top: $spacing-6  
+            .blocks
+                .block
+                    h2.block-title
+                        font-style: normal
+            #couts-de-la-formation-initiale
+                background-color: #00A1E6
+                padding: pxToRem(55) pxToRem(30)
+            #couts-de-la-formation-continue
+                background-color: #7dc3ed
+                padding: pxToRem(55) pxToRem(30)
+                margin-top: var(--grid-gutter)
+            #couts-de-lapprentissage
+                background-color: #b0daf4
+                padding: pxToRem(55) pxToRem(30)
+                margin-top: var(--grid-gutter)
+
+        #admission
+            #contacts
+                position: relative
+                p
+                    margin-left: calc(60px + var(--grid-gutter))
+                    &::before
+                        position: absolute
+                        left: 0px
+                        content: " "
+                        width: 60px
+                        height: 60px
+                        background-image: url('/assets/images/contact-logo.svg')
+                        background-repeat: no-repeat
+                        background-size: contain
+                    a
+                        text-decoration: none
+                        color: $color-accent
+                @include media-breakpoint-down(sm)
+                    p
+                        margin-left: calc(40px + var(--grid-gutter))
+                        &::before
+                            width: 40px
+                            height: 40px

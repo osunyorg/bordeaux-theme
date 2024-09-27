@@ -1,0 +1,28 @@
+.locations--grid
+    @include in-page-without-sidebar
+        @include grid(4)
+    .location
+        .location-content
+            .location-description
+                margin-top: $spacing-3
+                p.more.meta
+                    border: 1px solid $color-text
+                    margin-top: $spacing-3
+                    padding: 14px 25px
+                    transition: background-color 0.3s ease
+                    transition: color 0.3s ease
+                    width: fit-content
+                    &::after
+                        color: $color-text                 
+                        
+        &:hover
+            .location-content
+                .location-description
+                    p.more.meta
+                        background: var(--btn-hover-background)
+                        color: var(--btn-hover-color)
+                        &::after
+                            color: var(--btn-hover-color)
+        .media
+            img
+                aspect-ratio: 1
