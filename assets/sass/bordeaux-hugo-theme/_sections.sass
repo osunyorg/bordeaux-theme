@@ -1,3 +1,8 @@
+// shame ( en attendant fix du theme)
+.programs__section main,
+.locations__taxonomy main
+    padding-bottom: var(--spacing-5)
+
 ////// SECTION ACCUEIL
 .page__home
     .hero--with-image
@@ -121,8 +126,8 @@
                 font-family: $heading-font-family
                 font-size: $body-size-desktop
 
-////// SECTION PROGRAMS 
-body.programs__section, 
+////// SECTION PROGRAMS
+body.programs__section,
 body.diplomas__term
     .hero
         .container
@@ -141,14 +146,14 @@ body.diplomas__term
                 @include media-breakpoint-up(desktop)
                     grid-gap: 0
                     width: columns(7)
-                    dt:not(:last-of-type) 
-                        border-bottom: 1px solid $marron-secondaire-3             
+                    dt:not(:last-of-type)
+                        border-bottom: 1px solid $marron-secondaire-3
                     dd
                         text-align: right
                         font-size: pxToRem(19)
-                        font-weight: 400    
-                        
-                    dd:not(:last-of-type)  
+                        font-weight: 400
+
+                    dd:not(:last-of-type)
                         border-bottom: 1px solid $marron-secondaire-3
                     dt
                         font-family: $heading-font-family
@@ -156,8 +161,8 @@ body.diplomas__term
                         font-weight: 400
             .hero-actions
                 .dropdown-share
-                    .dropdown-menu 
-                        a:hover 
+                    .dropdown-menu
+                        a:hover
                             color: white
 
     .document-content
@@ -182,13 +187,13 @@ body.diplomas__term
                         content: counter(section) "."
             .featured-image
                 display: none
-            
+
             section:not(:first-child):not(.block)
                 @include media-breakpoint-up(desktop)
                     margin-top: 0
             section:not(:first-of-type):not(.block)
                 @include media-breakpoint-up(desktop)
-                    margin-top: $spacing-6  
+                    margin-top: $spacing-6
             .blocks
                 .block
                     h2.block-title
