@@ -42,9 +42,6 @@
                     dl
                         dt, strong
                             color: $color-official-blue
-                        picture.is-png
-                            img
-                                max-width: initial
                         @include media-breakpoint-down(md)
                             align-items: center
                             display: flex
@@ -62,58 +59,6 @@
                     img
                         margin-left: auto
                         margin-right: auto
-
-        &-pages
-            &--large.with-images
-                .page-title
-                        a
-                            text-decoration: none
-                            transition-property: color
-                            &:hover
-                                text-decoration: none
-                            // &::after
-                            //     content: ""
-                p.more.meta
-                    color: $color-accent
-                    font-family: $heading-font-family
-                    font-weight: 300
-
-                @include in-page-without-sidebar
-                    .page
-                        .page-content
-                            font-family: $heading-font-family
-                            .page-title
-                                margin-bottom: $spacing-4
-                                font-size: pxToRem(44)
-                            > p
-                                font-size: pxToRem(27)
-                                line-height: 130%
-                                font-weight: 300
-                        .media
-                            aspect-ratio: 7 / 5
-                        p.more.meta
-                            margin-top: $spacing-4
-                            &::after
-                                content: ""
-
-            &--list
-                .list
-                    .post
-                        @include media-breakpoint-up(desktop)
-                            border-bottom: none
-                            padding-bottom: 0
-                            .post-content
-                                display: flex
-                                flex-direction: row
-                                gap: var(--grid-gutter)
-                                width: columns(9)
-                                .post-title
-                                    width: columns(3)
-                                p[itemprop="articleBody"]
-                                    margin-top: 0
-                                    width: columns(6)
-                            .post-meta
-                                display: none
 
         &-testimonials
             blockquote
