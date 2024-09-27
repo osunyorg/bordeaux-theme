@@ -80,10 +80,7 @@
 
                 @include in-page-without-sidebar
                     .page
-                        gap: var(--grid-gutter)
-                        justify-content: space-between
                         .page-content
-                            width: columns(6)
                             font-family: $heading-font-family
                             .page-title
                                 margin-bottom: $spacing-4
@@ -98,12 +95,6 @@
                             margin-top: $spacing-4
                             &::after
                                 content: ""
-
-                &:nth-child(even of .block-pages--large.with-images)
-                    @include media-breakpoint-up(desktop)
-                        .media
-                            order: 1
-                            margin-bottom: 0
 
             &--list
                 .list
