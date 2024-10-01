@@ -130,18 +130,21 @@
 body.programs__section,
 body.diplomas__term
     .hero
-        .container
+        > .container
             .content
-                .hero-text
-                    @include media-breakpoint-up(desktop)
+                @include media-breakpoint-up(md)
+                    .hero-text
                         width: columns(7)
-                .hero-logos
-                    flex-direction: row
-                    z-index: 2
-        .btn.website
-            text-align: left
+                    .hero-logos
+                        align-self: end
+                        flex-direction: row
+                        width: columns(4)
+                        z-index: 2
+                        .logo
+                            width: columns(2)
+                @include media-breakpoint-down(md)
+                    flex-direction: column
         .essential-container
-            .hero-essential,
             .essential
                 @include media-breakpoint-up(desktop)
                     grid-gap: 0
@@ -152,7 +155,6 @@ body.diplomas__term
                         text-align: right
                         font-size: pxToRem(19)
                         font-weight: 400
-
                     dd:not(:last-of-type)
                         border-bottom: 1px solid $marron-secondaire-3
                     dt
