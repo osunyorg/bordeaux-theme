@@ -11,10 +11,17 @@ p.more.meta
     &::after
         color: $color-official-blue
 
-ul
-    list-style-type: '\0025C6'
-    li::marker
-        color: $color-official-blue
+.programs__section .document-content,
+.rich-text
+    ul
+        list-style-type: '\0025C6'
+        list-style-position: outside
+        li
+            padding-left: 5px
+            + li
+                margin-top: $spacing-1
+            &::marker
+                color: $color-official-blue
 
 header#document-header
     border-bottom: 0px
