@@ -39,19 +39,19 @@
         &-key_figures
             ul
                 li
-                    dl
-                        dt, strong
+                    p
+                        strong
                             color: $color-official-blue
                         @include media-breakpoint-down(md)
                             align-items: center
                             display: flex
                             gap: $spacing-1
                             flex-wrap: nowrap
-                            dt
+                            span:first-child
                                 display: flex
                                 align-items: center
                                 gap: $spacing-2
-                            dd
+                            span:last-child
                                 margin-top: auto
                                 margin-bottom: auto
                 @include in-page-without-sidebar

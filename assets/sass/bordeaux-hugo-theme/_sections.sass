@@ -149,18 +149,18 @@ body.diplomas__term
                 @include media-breakpoint-up(desktop)
                     grid-gap: 0
                     width: columns(7)
-                    dt:not(:last-of-type)
-                        border-bottom: 1px solid $marron-secondaire-3
-                    dd
-                        text-align: right
-                        font-size: pxToRem(19)
-                        font-weight: 400
-                    dd:not(:last-of-type)
-                        border-bottom: 1px solid $marron-secondaire-3
                     dt
                         font-family: $heading-font-family
                         font-size: pxToRem(22)
                         font-weight: 400
+                        &:not(:last-of-type)
+                            border-bottom: 1px solid $marron-secondaire-3
+                    dd
+                        text-align: right
+                        font-size: pxToRem(19)
+                        font-weight: 400
+                        &:not(:last-of-type)
+                            border-bottom: 1px solid $marron-secondaire-3
             .hero-actions
                 .dropdown-share
                     .dropdown-menu
