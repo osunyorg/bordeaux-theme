@@ -26,3 +26,17 @@
         .media
             img
                 aspect-ratio: 1
+
+.locations-map
+    .map
+        .leaflet-popup
+            &::after
+                border-top-color: $color-marron-sur-bleu
+            &-content
+                background-color: $color-marron-sur-bleu
+                .location-content 
+                    color: $color-background
+                    span,
+                    .location-title
+                        font-family: $heading-font-family
+                        font-size: $body-size
