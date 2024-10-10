@@ -1,6 +1,5 @@
 // shame ( en attendant fix du theme)
-.programs__section main,
-.locations__taxonomy main
+.programs__section main
     padding-bottom: var(--spacing-5)
 
 ////// SECTION ACCUEIL
@@ -120,11 +119,18 @@
                                     .meta
                                         max-width: columns(3)
                                         text-align: right
-    .campus-map
-        .campus
+
+.locations-map
+    .map
+        .leaflet-popup
+            &::after
+                border-top-color: $color-official-blue
             &-content
-                font-family: $heading-font-family
-                font-size: $body-size-desktop
+                background-color: $color-official-blue
+                .location-content 
+                    color: $color-marron-sur-bleu
+                    span
+                        font-family: $heading-font-family
 
 ////// SECTION PROGRAMS
 body.programs__section,
