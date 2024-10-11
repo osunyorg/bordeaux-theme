@@ -229,3 +229,26 @@ body.diplomas__term
                         &::before
                             width: 40px
                             height: 40px
+
+        &.diploma-but-secondaire,
+        &.diploma-but-tertiaire
+            .block-chapter
+                &--alt_background
+                    .chapter
+                        li::marker
+                            color: $color-text
+        &.diploma-but-secondaire
+            .block-chapter
+                &--alt_background
+                    .chapter
+                        background-color: $color-green
+                        li::marker
+                            color: $color-text
+        &.diploma-but-tertiaire
+            .block-chapter
+                &--alt_background
+                    .chapter
+                        background-color: $color-orange
+                        li::marker
+                            color: $color-text
+
