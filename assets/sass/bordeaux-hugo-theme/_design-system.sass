@@ -40,10 +40,10 @@ header#document-header
                 margin: $spacing-1 0
                 padding-left: $spacing-3
                 &:not(:last-child)
-                    border-right: 1px solid $color-marron-sur-bleu
+                    border-right: 1px solid $color-brown
                     padding-right: $spacing-3
                 a
-                    color: $color-marron-sur-bleu
+                    color: $color-brown
                     text-decoration: none
                     transition-property: color
                     &::after
@@ -64,7 +64,7 @@ header#document-header
             @media screen and (min-height: 800px) and (min-width: 1200px) // CUSTOM dropdown menu en desktop avec barre en biais
                 .dropdown-menu
                     padding-top: var(--grid-gutter)
-                    border-top: 1px solid $marron-secondaire-3
+                    border-top: 1px solid $color-brown-3
                     max-height: calc(100vh - var(--header-height) - 100px)
                     overflow: visible
                     .nav-level-2
@@ -116,7 +116,7 @@ header#document-header
 
 .hero
     + .breadcrumb-container
-        background-color: $marron-secondaire-4
+        background-color: $color-brown-4
         margin-bottom: $spacing-5
         padding: 0
         width: 100%
@@ -224,7 +224,7 @@ footer#document-footer
                 img
                     opacity: 40%
             .footer-site
-                border-left: 1px solid $marron-secondaire-1
+                border-left: 1px solid $color-brown-1
                 padding-left: $spacing-3
                 p,
                 address
@@ -269,9 +269,9 @@ footer#document-footer
     div.footer
         &-social
             background-color: $color-official-blue
-            color: $color-marron-sur-bleu
+            color: $color-brown
             a
-                color: $color-marron-sur-bleu
+                color: $color-brown
             .social-container
                 display: flex
                 flex-direction: column
@@ -314,11 +314,11 @@ footer#document-footer
                                 
 
         &-legals
-            border-top: 1px solid $marron-secondaire-1
-            color: $marron-secondaire-3
+            border-top: 1px solid $color-brown-1
+            color: $color-brown-3
             padding: $spacing-5 var(--grid-gutter)
             a
-                color: $marron-secondaire-3 !important
+                color: $color-brown-3 !important
             @include media-breakpoint-up(desktop)
                 padding: $spacing-3 var(--grid-gutter)
                 width: 100%
