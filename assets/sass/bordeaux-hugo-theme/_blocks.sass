@@ -64,3 +64,14 @@
             blockquote
                 p
                     letter-spacing: -.05rem
+        &-programs
+            &--grid
+                .programs-grid 
+                    .program 
+                        .program-title
+                            a
+                                @include icon(arrow-right-line, after, true)
+                                @include hover-translate-icon
+                        .more
+                            display: none
+                
