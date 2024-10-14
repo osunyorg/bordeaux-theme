@@ -15,14 +15,16 @@ p.more.meta
 .programs__section .document-content section section,
 .block:not(.block-key_figures) .rich-text
     ul
-        list-style-type: '\0025C6'
-        list-style-position: outside
+        list-style-type: none
+        position: relative
         li
-            padding-left: 5px
+            &::before
+                color: $color-official-blue
+                content: '\0025C6'
+                position: absolute
+                left: 0
             + li
                 margin-top: $spacing-1
-            &::marker
-                color: $color-official-blue
 
 header#document-header
     border-bottom: 0px
