@@ -13,7 +13,8 @@ p.more.meta
         color: $color-official-blue
 
 .programs__section .document-content section section,
-.block:not(.block-key_figures) .rich-text
+.block:not(.block-key_figures) .rich-text,
+.menu .nav-level-3
     ul
         list-style-type: none
         position: relative
@@ -84,10 +85,6 @@ header#document-header
                         transform-origin: bottom left
                         width: 110%
                         z-index: -1
-                    .nav-level-4
-                        li
-                            a::before
-                                content: "• "
             > li
                 > span,
                 > a
@@ -112,6 +109,9 @@ header#document-header
                         .nav-level-4
                             > li
                                 margin-top: $spacing-1
+                                padding-left: 1em
+                                &::before
+                                    line-height: 1em
                                 *
                                     font-style: italic
                                     font-size: pxToRem(15)
