@@ -28,97 +28,10 @@
 
 ////// SECTION LOCATION (CAMPUS)
 .locations__term
-    ul.diplomas
-        > li
-            > a
-                font-style: italic
-                &::after
-                    content: ""
-                @include media-breakpoint-up(desktop)
-                    @include h3
-            .content
-                ol.programs
-                    > li
-                        justify-content: flex-start
-                        margin-top: $spacing-3
-                        @include media-breakpoint-up(md)
-                            &:not(:first-child)
-                                border-top: none
-                            .media
-                                order: 1
-                                width: columns(3)
-                        .program-content
-                            @include media-breakpoint-up(md)
-                                order: 2
-                                width: columns(9)
-                            a
-                                display: block
-                                width: 100%
-                                &::after
-                                    content: ""
-                            .program-details
-                                display: flex
-                                flex-direction: column
-                                justify-content: space-between
-                                .description
-                                    font-size: pxToRem(15)
-                                    @include media-breakpoint-up(desktop)
-                                        font-size: $body-size-desktop
-                                .details-more
-                                    display: flex
-                                    flex-direction: row
-                                    gap: $spacing-1
-                                    @include media-breakpoint-down(desktop)
-                                        margin-top: $spacing-2
-                                    picture
-                                        max-height: 60px
-                                        max-width: columns(3)
-                                        img
-                                            object-fit: contain
-                                            object-position: left
-                                            height: 100%
-
-                                a, p.meta, .btn
-                                    @include meta
-                                    font-size: pxToRem(15)
-                                .btn, ol, .meta, picture
-                                    margin-top: $spacing-1
-                                    @include media-breakpoint-up(desktop)
-                                        margin-top: $spacing-3
-                                .btn
-                                    display: block
-                                    font-size: var(--small-size)
-                                    width: columns(3)
-                                    min-width: fit-content
-                                    max-width: columns(3)
-                                    height: fit-content
-                                    background-color: $color-text
-                                    color: $color-background
-                                    &:hover
-                                        background-color: $color-background
-                                        color: $color-text
-                                ol
-                                    > li
-                                        margin: 0
-                                        a
-                                            &::before
-                                                content: "·"
-                                                vertical-align: initial
-                                            @include media-breakpoint-up(desktop)
-                                                font-size: $body-size-desktop
-                                .meta
-                                    .title
-                                        display: block
-                                        font-weight: 600
-                                @include media-breakpoint-up(desktop)
-                                    flex-direction: row
-                                    .btn
-                                        font-size: var(--body-size)
-                                    > div
-                                        width: columns(6)
-                                    .meta
-                                        max-width: columns(3)
-                                        text-align: right
+    .document-content
+        > .diplomas
+            .programs .program
+                flex-direction: row
 
 ////// SECTION PROGRAMS
 body.programs__section,

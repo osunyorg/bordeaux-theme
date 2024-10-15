@@ -14,6 +14,8 @@
         {{end}}
     </div>
 {{ end }}
+
+{{/*  TODO intégrer l'image de hero via du CSS et supprimer ce partiel */}}
 {{ if .Params.image }}
     {{ partial "commons/image-figure.html" (dict
         "image"    .Params.image
