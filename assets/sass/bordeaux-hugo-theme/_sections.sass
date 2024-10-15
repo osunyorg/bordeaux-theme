@@ -31,7 +31,24 @@
     .document-content
         > .diplomas
             .programs .program
-                flex-direction: row
+                @include media-breakpoint-down(md)
+                    flex-direction: column
+                    .media
+                        display: block
+                        order: -1
+                @include media-breakpoint-up(md)
+                    flex-direction: row
+                    justify-content: start
+                    .program-content
+                        flex-grow: 0
+                        width: columns(6)
+                    .program-contact
+                        flex: 1
+                        text-align: right
+                        width: columns(3)
+                    .media
+                        width: columns(3)
+
 
 ////// SECTION PROGRAMS
 body.programs__section,
@@ -153,15 +170,18 @@ body.diplomas__term
         &.diploma-but-secondaire
             .block-chapter
                 &--alt_background
+                    background-color: $color-green
                     .chapter
                         background-color: $color-green
+                        color: black
                         li::before
                             color: $color-text
         &.diploma-but-tertiaire
             .block-chapter
                 &--alt_background
+                    background-color: $color-orange
                     .chapter
                         background-color: $color-orange
+                        color: black
                         li::before
                             color: $color-text
-
