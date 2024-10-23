@@ -101,22 +101,34 @@ header#document-header
                         @include h3
                         @media screen and (max-height: 900px), screen and (max-width: 1600px)
                             font-size: var(--h4-size)
-                    .nav-level-3
-                        @media screen and (min-height: 900px)
-                            padding-top: $spacing-3
-                        > li, *
-                            font-family: $body-font-family
-                        .nav-level-4
-                            > li
-                                margin-top: $spacing-1
-                                padding-left: 1em
-                                &::before
-                                    line-height: var(--body-line-height)
-                                    font-size: 0.8em
-                                    color: $color-brown
-                                *
-                                    font-style: italic
-                                    font-size: pxToRem(15)
+            .nav-level-3
+                @media screen and (min-height: 900px)
+                    padding-top: $spacing-3
+                > li, *
+                    font-family: $body-font-family
+            .nav-level-4
+                margin-left: $spacing-1
+                > li
+                    padding-left: 1em
+                    font-style: italic
+                    margin-top: 0.3em
+                    &::before
+                        line-height: var(--body-line-height)
+                        font-size: 0.8em
+                        color: $color-brown
+                    a
+                        padding-top: 0
+                        padding-bottom: 0
+                @include media-breakpoint-up(md)
+                    > li 
+                        a
+                            font-size: pxToRem(15)
+                @include media-breakpoint-down(md)
+                    padding-bottom: $spacing-1
+                    > li
+                        a
+                            @include meta
+
 
 .hero
     + .breadcrumb-container
