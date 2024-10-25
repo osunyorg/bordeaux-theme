@@ -40,3 +40,19 @@
                     .location-title
                         font-family: $heading-font-family
                         font-size: $body-size
+
+.locations__term
+    @include media-breakpoint-up(desktop)
+        .hero,
+        .hero--with-image 
+            .content
+                .hero-text
+                    display: flex
+                    align-items: flex-end
+                    gap: var(--grid-gutter)
+                    width: 100%
+                    h1,
+                    hgroup
+                        width: columns(9)
+                    address
+                        width: columns(3)
