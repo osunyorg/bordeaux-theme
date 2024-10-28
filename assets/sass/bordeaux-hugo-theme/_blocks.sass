@@ -39,21 +39,20 @@
         &-key_figures
             ul
                 li
-                    p
-                        strong
-                            color: $color-official-blue
-                        @include media-breakpoint-down(md)
-                            align-items: center
+                    strong
+                        color: $color-official-blue
+                    @include media-breakpoint-down(md)
+                        align-items: center
+                        display: flex
+                        gap: $spacing-1
+                        flex-wrap: nowrap
+                        span:first-child
                             display: flex
-                            gap: $spacing-1
-                            flex-wrap: nowrap
-                            span:first-child
-                                display: flex
-                                align-items: center
-                                gap: $spacing-2
-                            span:last-child
-                                margin-top: auto
-                                margin-bottom: auto
+                            align-items: center
+                            gap: $spacing-2
+                        span:last-child
+                            margin-top: auto
+                            margin-bottom: auto
                 @include in-page-without-sidebar
                     text-align: center
                     img
