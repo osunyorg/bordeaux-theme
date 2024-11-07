@@ -65,14 +65,14 @@ header#document-header
             &[aria-expanded*="true"]
                 color: $color-accent !important
         .nav-level-1
-            @media screen and (min-height: 800px) and (min-width: 1200px) // CUSTOM dropdown menu en desktop avec barre en biais
+            @include media-breakpoint-up(md)
                 .dropdown-menu
                     padding-top: var(--grid-gutter)
                     border-top: 1px solid $color-brown-3
-                    max-height: calc(100vh - var(--header-height) - 100px)
+                    // max-height: calc(100vh - var(--header-height) - 100px)
                     overflow: visible
                     .nav-level-2
-                        max-height: calc(100vh - var(--header-height) - 100px - var(--spacing-3))
+                        max-height: calc(100vh - var(--header-height) - var(--grid-gutter) * 2)
                         overflow: auto
                         padding-bottom: 0
                     &::after
