@@ -59,11 +59,12 @@
                     img
                         margin-left: auto
                         margin-right: auto
-
-        &-testimonials
-            blockquote
-                p
-                    letter-spacing: -.05rem
+        &-pages
+            &--list
+                ul:not(.title-only) li + li
+                    border-top: 1px solid var(--color-border)
+                    margin-top: $spacing-4
+                    padding-top: $spacing-4
         &-programs
             &--grid
                 .programs-grid 
@@ -74,4 +75,8 @@
                                 @include hover-translate-icon
                         .more
                             display: none
-                
+
+        &-testimonials
+            blockquote
+                p
+                    letter-spacing: -.05rem
