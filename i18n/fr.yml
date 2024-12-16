@@ -1,0 +1,15 @@
+custom:
+  suivez-nous: Suivez-nous
+  location: Lieu
+
+programs:
+  content: Compétences visées
+  location:
+    one: Site de formation
+    other: Sites de formation
+  _other: Alternance
+  pricing_initial: Tarifs de la formation initiale
+  pricing_continuing: Tarifs de la formation continue (adultes en reprise d'études)
+  pricing_apprenticeship: Tarifs de l'apprentissage
+  type:
+    continuing: Formation continue (adultes en reprise d'études)
