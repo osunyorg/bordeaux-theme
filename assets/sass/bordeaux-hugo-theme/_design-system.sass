@@ -297,39 +297,38 @@ footer#document-footer
                 margin: auto
                 max-width: var(--grid-width)
                 padding: $spacing-5 var(--grid-gutter)
-                h3
-                    font-style: normal
-                    padding-bottom: $spacing-2
-                .nav-social
-                    + ul.site-links
-                        display: flex
-                        flex-direction: column
-                        margin: 0
-                        li
-                            flex-direction: row-reverse
-                            &::after
-                                font-size: pxToRem(20)
+                p
+                    @include h3
+                ul.site-links
+                    display: flex
+                    flex-direction: column
+                    margin: 0
+                    li
+                        flex-direction: row-reverse
+                        &::after
+                            font-size: pxToRem(20)
+                @include media-breakpoint-down(desktop)
+                    p
+                        padding-bottom: $spacing-3
                 @include media-breakpoint-up(desktop)
                     align-items: center
                     flex-direction: row
                     flex-wrap: wrap
                     padding: $spacing-3 var(--grid-gutter)
-                    h3
-                        padding: pxToRem(6) 0
-                    .nav-social
-                        + ul.site-links
-                            display: flex
-                            flex-wrap: wrap
-                            flex-direction: row
-                            gap: $spacing-5
-                            li
-                                gap: $spacing-2
-                                margin-top: 0
-                                padding: pxToRem(6) 0
-                                &::after
-                                    margin-right: 0
-                                    padding-left: 0
-                                
+                    p
+                        padding: pxToRem(6) 0 !important
+                    ul.site-links
+                        display: flex
+                        flex-wrap: wrap
+                        flex-direction: row
+                        gap: $spacing-5
+                        li
+                            gap: $spacing-2
+                            margin-top: 0
+                            padding: pxToRem(6) 0
+                            &::after
+                                margin-right: 0
+                                padding-left: 0
 
         &-legals
             border-top: 1px solid $color-brown-1
