@@ -1,6 +1,5 @@
-custom:
-  footer:
-    follow: Suivez-nous  
+footer:
+  follow: Suivez-nous  
 programs:
   content: Compétences visées
   location:
