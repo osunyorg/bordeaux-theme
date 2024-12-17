@@ -1,7 +1,5 @@
-custom:
-  suivez-nous: Suivez-nous
-  location: Lieu
-
+footer:
+  follow: Suivez-nous  
 programs:
   content: Compétences visées
   location:

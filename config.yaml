@@ -5,6 +5,9 @@ params:
     active: true
   breadcrumb:
     position: after-hero
+  home:
+    head:
+      title: site
   logo:
     header: "/assets/images/logo.svg"
     footer: "/assets/images/logo-blanc.svg"

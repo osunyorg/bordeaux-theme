@@ -1,7 +1,14 @@
 <div class="footer-social">
   <div class="social-container">
-    <h3> {{ safeHTML (i18n "custom.suivez-nous") }}</h3>
-    {{ partial "footer/social.html" }}
+    <p>{{ i18n "footer.follow" }}</p>
+    {{ with site.Params.contact_details }}
+      <ul class="footer-social site-links">
+        {{ partial "commons/socials" (dict
+            "use_default_email_label" true
+            "context" .
+          )}}
+      </ul>
+    {{ end }}
   </div>
 </div>
 
