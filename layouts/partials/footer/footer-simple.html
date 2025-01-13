@@ -22,15 +22,17 @@
     </div>
   </div>
   <div class="footer-partners">
+    <a href="https://www.u-bordeaux.fr" target="_blank" rel="noreferrer" class="logo-university">
       <img src="/assets/images/uni-bordeaux.svg" alt="Université de Bordeaux" loading="lazy" />
-      {{ partial "commons/menu.html"
-        (dict
-          "kind" "footer-bouton-contact"
-          "dropdown" false
-          "level" 1
-          "context" .
-        ) 
-      }}
+    </a>
+    {{ partial "commons/menu.html"
+      (dict
+        "kind" "footer-bouton-contact"
+        "dropdown" false
+        "level" 1
+        "context" .
+      ) 
+    }}
   </div>
 </div>
 

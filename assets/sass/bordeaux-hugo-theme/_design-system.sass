@@ -239,8 +239,6 @@ footer#document-footer
             min-width: columns(4)
             .footer-logo
                 padding-right: $spacing-3
-                img
-                    opacity: 40%
             .footer-site
                 border-left: 1px solid $color-brown-1
                 padding-left: $spacing-3
@@ -257,9 +255,11 @@ footer#document-footer
             flex-direction: column
             gap: $spacing-5
             width: fit-content
+            .logo-university
+                &::after
+                    display: none
             img
                 width: pxToRem(250)
-                opacity: 40%
             .nav-level-1
                 a
                     appearance: none
