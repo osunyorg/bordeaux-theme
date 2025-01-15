@@ -12,21 +12,36 @@ p.more.meta
     &::after
         color: $color-official-blue
 
-.programs__section .document-content section section,
-.block:not(.block-key_figures) .rich-text,
-.menu .nav-level-3
-    ul
-        list-style-type: none
+// mixin for icon in lists
+@mixin diamond-list($icon-size, $font-size)
+    background-color: $color-official-blue
+    content: ''
+    display: inline-block
+    height: pxToRem($icon-size)
+    position: absolute
+    top: calc((#{$font-size} * 1.5 / 2) - calc(#{$icon-size}px / 2))
+    transform: rotate(45deg)
+    vertical-align: middle
+    width: pxToRem($icon-size)
+
+.programs__section .document-content section section ul,
+.block:not(.block-key_figures) .rich-text ul,
+.menu .nav-level-4
+    list-style-type: none
+    li
         position: relative
-        li
-            &::before
-                color: $color-official-blue
-                content: '\0025C6'
-                position: absolute
-                left: 0
-                font-style: normal
-            + li
-                margin-top: $spacing-1
+        + li
+            margin-top: $spacing-1
+// for sections and program
+.programs__section .document-content section section ul,
+.block:not(.block-key_figures) .rich-text ul
+    li::before
+        @include diamond-list(7, var(--body-size))
+        left: calc(var(--body-size) * -1)
+// for menu
+.menu .nav-level-4 li::before
+    @include diamond-list(6, var(--meta-size))
+    left: space()
 
 header#document-header
     border-bottom: 0px
