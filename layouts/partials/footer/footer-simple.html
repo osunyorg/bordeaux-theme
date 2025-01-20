@@ -36,7 +36,13 @@
   </div>
 </div>
 
-{{ partial "footer/i18n.html" . }}
+{{ if in site.Params.i18n.positions "footer" }}
+  {{ partial "commons/i18n.html" (dict
+      "context" .
+      "position" "footer"
+    )}}
+{{ end }}
+
 <div class="footer-legals">
   {{ $menu := partial "GetMenu" "legal" }}
   {{ with $menu }}
