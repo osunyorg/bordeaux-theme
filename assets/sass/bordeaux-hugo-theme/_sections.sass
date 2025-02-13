@@ -199,3 +199,9 @@ body.diplomas__term
                     transition: color 0.55s $arrow-ease-transition
                     &:hover
                         color: $color-official-blue
+
+// Reduce size of heading blocks to be similar to other titles in this page
+.programs__section
+    .heading.block-title
+        > *
+            @include h3
