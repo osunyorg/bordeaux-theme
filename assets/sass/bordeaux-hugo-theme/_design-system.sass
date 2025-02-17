@@ -26,6 +26,7 @@ p.more.meta
 
 .programs__section .document-content section section ul,
 .block:not(.block-key_figures) .rich-text ul,
+.block .notes ul,
 .menu .nav-level-4
     list-style-type: none
     li
@@ -33,11 +34,13 @@ p.more.meta
         + li
             margin-top: $spacing-1
 // for sections and program
-.programs__section .document-content section section ul,
-.block:not(.block-key_figures) .rich-text ul
-    li::before
-        @include diamond-list(7, var(--body-size))
-        left: calc(var(--body-size) * -1)
+.programs__section .document-content section section,
+.block:not(.block-key_figures) .rich-text,
+.block .notes
+    ul 
+        li::before
+            @include diamond-list(7, var(--body-size))
+            left: calc(var(--body-size) * -1)
 // for menu
 .menu .nav-level-4 li::before
     @include diamond-list(6, var(--meta-size))
