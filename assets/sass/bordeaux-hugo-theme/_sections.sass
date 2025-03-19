@@ -132,9 +132,10 @@ body.diplomas__term
                     h2.block-title
                         font-style: normal
                 .block-chapter--accent_background 
-                    + .block-chapter--alt_background,
-                    + .block-chapter--accent_background
-                        margin-top: var(--block-space-y)
+                    @include media-breakpoint-up(desktop)
+                        + .block-chapter--alt_background,
+                        + .block-chapter--accent_background
+                            margin-top: var(--block-space-y)
         #admission
             .program-admission-pricing
                 &-initial
