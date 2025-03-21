@@ -85,26 +85,27 @@ header#document-header
                 color: $color-accent !important
         .nav-level-1
             @include media-breakpoint-up(md)
-                .dropdown-menu
-                    padding-top: var(--grid-gutter)
-                    border-top: 1px solid $color-brown-3
-                    // max-height: calc(100vh - var(--header-height) - 100px)
-                    overflow: visible
-                    .nav-level-2
-                        max-height: calc(100vh - var(--header-height) - var(--grid-gutter) * 2)
-                        overflow: auto
-                        padding-bottom: 0
-                    &::after
-                        background: $color-background
-                        bottom: 0
-                        content: ""
-                        height: 100%
-                        left: -10px
-                        position: absolute
-                        transform: rotate(4deg)
-                        transform-origin: bottom left
-                        width: 110%
-                        z-index: -1
+                @if $header-dropdown-full
+                    .dropdown-menu
+                        padding-top: var(--grid-gutter)
+                        border-top: 1px solid $color-brown-3
+                        // max-height: calc(100vh - var(--header-height) - 100px)
+                        overflow: visible
+                        .nav-level-2
+                            max-height: calc(100vh - var(--header-height) - var(--grid-gutter) * 2)
+                            overflow: auto
+                            padding-bottom: 0
+                        &::after
+                            background: $color-background
+                            bottom: 0
+                            content: ""
+                            height: 100%
+                            left: -10px
+                            position: absolute
+                            transform: rotate(4deg)
+                            transform-origin: bottom left
+                            width: 110%
+                            z-index: -1
             > li
                 > span,
                 > a
