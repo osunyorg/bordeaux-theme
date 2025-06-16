@@ -44,21 +44,5 @@
 {{ end }}
 
 <div class="footer-legals">
-  {{ $menu := partial "GetMenu" "legal" }}
-  {{ with $menu }}
-  <ul class="nav-legal nav-level-1">
-    {{ range .items -}}
-      {{- $link_class := "" -}}
-      {{- $attr := "" -}}
-      {{- $attr_title := "" -}}
-      {{ if eq .context.RelPermalink .target }}
-        {{ $link_class = "active" }}
-      {{ end }}
-      <li>
-          <a href="{{ .target }}"{{ if ne $link_class ""}} class="{{ $link_class }}"{{ end }} {{ safeHTMLAttr $attr }} {{ safeHTMLAttr $attr_title }}>{{ .title }}</a>
-      </li>
-      {{ end -}}
-      <li class="footer-credit">{{ safeHTML (i18n "commons.credit") }}</li>
-  </ul>
-{{ end }}
+  {{ partial "footer/legals.html" . }}
 </div>
