@@ -192,59 +192,60 @@ $positions: (top: top, center: center, bottom: bottom)
                 img
                     object-position: $position
 
-body:not(.persons__page) .hero--with-image,
-.programs__section .hero
-    > .container
-        .content
-            display: flex
-            padding-top: 0
-            .hero-text
-                margin-top: 40vh
-                z-index: 2
-                @include media-breakpoint-up(md)
-                    margin-top: 60vh
-            figure
-                position: absolute
-                left: 0
-                right: 0
-                overflow: hidden
-                height: 40vh
-                min-width: 100%
-                margin: 0
-                @include media-breakpoint-up(md)
-                    height: 60vh
-                figcaption
-                    top: 0
-                    left: initial
-                    color: #fff
-                    &::before
-                        background: none
-                        padding-right: $spacing-2
-                    .credit
-                        background: $color-text
-                        padding-right: calc(var(--spacing-2) + var(--spacing-3))
-
-                picture
-                    height: 100%
-                    img
-                        aspect-ratio: 5/3
-                        height: 100%
-                        object-fit: cover
-                        object-position: center
-                        width: 100%
-                &::before
-                    background: var(--color-background)
-                    content: ""
-                    height: calc(100%)
-                    position: absolute
-                    right: 0
-                    top: calc(40vh - calc(0.1 * 100vw))
-                    transform: rotate(4deg)
-                    transform-origin: bottom left
-                    width: 120%
-                    z-index: 1
+@if $hero-beveled
+    body:not(.persons__page) .hero--with-image,
+    .programs__section .hero
+        > .container
+            .content
+                display: flex
+                padding-top: 0
+                .hero-text
+                    margin-top: 40vh
+                    z-index: 2
                     @include media-breakpoint-up(md)
-                        top: calc(60vh - calc(0.1 * 100vw))
+                        margin-top: 60vh
+                figure
+                    position: absolute
+                    left: 0
+                    right: 0
+                    overflow: hidden
+                    height: 40vh
+                    min-width: 100%
+                    margin: 0
+                    @include media-breakpoint-up(md)
+                        height: 60vh
+                    figcaption
+                        top: 0
+                        left: initial
+                        color: #fff
+                        &::before
+                            background: none
+                            padding-right: $spacing-2
+                        .credit
+                            background: $color-text
+                            padding-right: calc(var(--spacing-2) + var(--spacing-3))
+
+                    picture
+                        height: 100%
+                        img
+                            aspect-ratio: 5/3
+                            height: 100%
+                            object-fit: cover
+                            object-position: center
+                            width: 100%
+                    &::before
+                        background: var(--color-background)
+                        content: ""
+                        height: calc(100%)
+                        position: absolute
+                        right: 0
+                        top: calc(40vh - calc(0.1 * 100vw))
+                        transform: rotate(4deg)
+                        transform-origin: bottom left
+                        width: 120%
+                        z-index: 1
+                        @include media-breakpoint-up(md)
+                            top: calc(60vh - calc(0.1 * 100vw))
 
 footer#document-footer
     padding-top: 0
