@@ -9,8 +9,8 @@ params:
     head:
       title: site
   logo:
-    header: "/assets/images/logo.svg"
-    footer: "/assets/images/logo-blanc.svg"
+    header: "/assets/images/logo-mp.svg"
+    footer: "/assets/images/logo-mp-white.svg"
   pages:
     index:
       truncate_description: 0
