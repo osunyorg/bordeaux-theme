@@ -161,17 +161,17 @@ header#document-header
     + .breadcrumb-container
         background-color: $color-brown-4
         margin-bottom: $spacing-5
-        padding: 0
         width: 100%
         .breadcrumb-nav
-            margin: 0 auto
             .breadcrumb
                 height: pxToRem(50)
-                padding-left: var(--grid-gutter)
-                padding-right: var(--grid-gutter)
                 li
                     a, span
                         font-size: $meta-size
+        @include media-breakpoint-up(desktop)
+            padding: 0
+            .breadcrumb-nav
+                @include container
 
 .hero,
 .hero--with-image
