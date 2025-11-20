@@ -10,6 +10,13 @@ ul
     li::marker
         font-size: 0.8em
 
+.document-content
+    > div:not(.blocks, .toc-container, .breadcrumb-container, .agenda-exhibitions)
+        margin-top: 0
+    .blocks
+        .block:first-child
+            margin-top: $spacing-5
+
 .block-title a,
 .page-title a,
 .program-title a,
