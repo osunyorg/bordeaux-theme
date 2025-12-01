@@ -24,12 +24,16 @@ params:
       options:
         summary: true
         image: true
+
+  components:
+    lightbox:
+      disabled: true
+  
   image_sizes:
-    design_system:
-      lightbox:
-        disabled: true
+    _default:
       hero:
         desktop:  2000
+  image_sizes:
     blocks:
       call_to_action:
         tablet:   700
@@ -57,7 +61,12 @@ params:
         hero:
           desktop:  2000
         hero_single:
-          desktop:  2000
+          landscape:
+            desktop:  2000
+          portrait:
+            desktop:  2000
+          square:
+            desktop:  2000
         item:
           mobile:   110
           tablet:   250
