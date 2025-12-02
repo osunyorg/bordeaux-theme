@@ -28,12 +28,11 @@ params:
   components:
     lightbox:
       disabled: true
-  
+
   image_sizes:
     _default:
       hero:
         desktop:  2000
-  image_sizes:
     blocks:
       call_to_action:
         tablet:   700
