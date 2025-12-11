@@ -28,6 +28,10 @@ params:
   components:
     lightbox:
       disabled: true
+      in_hero:
+        disabled: true
+      in_gallery:
+        disabled: false
 
   image_sizes:
     _default:
